@@ -25,12 +25,16 @@ const items = [
     title: "Share Screen",
   },
 ];
-const MenuButtons = () => {
+const MenuButtons = ({ navigation }) => {
+  const openMeeting = (navigateTo) => {
+    navigation.navigate(navigateTo);
+  };
   return (
     <View style={styles.container}>
       {items.map(({ id, name, title, customColor }) => (
         <View style={styles.buttonContainer} key={id}>
           <TouchableOpacity
+            onPress={(e) => openMeeting("Room")}
             style={[
               styles.button,
               { backgroundColor: customColor ? customColor : "#0470DC" },
