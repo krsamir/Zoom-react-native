@@ -23,6 +23,8 @@ export default function Navigation() {
             title: "Start a meeting",
             headerStyle: {
               backgroundColor: "#1c1c1c",
+              shadowOpacity: 0,
+              elevation: 0,
             },
             headerTintColor: "white",
           }}
